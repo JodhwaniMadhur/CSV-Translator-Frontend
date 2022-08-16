@@ -131,4 +131,4 @@ USE_TZ = True
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
-SERVER_URL = os.environ['EC2_URL']+':'+os.environ['TRANSLATION_API_PORT_NUMBER']
+SERVER_URL = 'http://'+os.environ['EC2_URL']+':'+os.environ['TRANSLATION_API_PORT_NUMBER']
