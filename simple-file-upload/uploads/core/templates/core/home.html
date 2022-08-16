@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+<link rel="stylesheet" type="text/css" href='../../static/main.css'>
+  <ul>
+      <div class="align_text">
+      <a href="{% url 'upload' %}">Upload</a>
+      <br>
+      <br>
+      </div>
+      <div class="align_text">
+      <a href="{% url 'download_translated_csv' %}">Download CSV</a>
+      <br>
+      <br>
+      </div>
+      <div class="align_text">
+      <a href="{% url 'download_previously_translated_csv' %}">Download Previously Translated CSV</a>
+      <br>
+      <br>
+      </div>
+  </ul>
+  
+{% endblock %}
