@@ -35,9 +35,11 @@ def download_translated_csv(request):
             requests.Response = requests.post(SERVER_URL+"/download-translated-csv", headers=header)
             file_path = MEDIA_ROOT+'/'+f"{language}_{file_name}"
 
+            #save file on server
             with open(file_path, "wb") as f:
                 f.write(requests.Response._content)
 
+            #return file and it's data in response
             with open(file_path) as myfile:
                 response = HttpResponse(myfile, content_type='text/csv')
                 response['Content-Disposition'] = 'attachment; filename='+f"{language}_{file_name}"
@@ -58,9 +60,11 @@ def download_previously_translated_csv(request):
             requests.Response = requests.post(SERVER_URL+"/download-previously-translated-csv", headers=header)
             file_path = MEDIA_ROOT+'/'+f"{language}_{file_name}"
 
+            #save file on server
             with open(file_path, "wb") as f:
                 f.write(requests.Response._content)
 
+            #return file and it's data in response
             with open(file_path) as myfile:
                 response = HttpResponse(myfile, content_type='text/csv')
                 response['Content-Disposition'] = 'attachment; filename='+f"{language}_{file_name}"
