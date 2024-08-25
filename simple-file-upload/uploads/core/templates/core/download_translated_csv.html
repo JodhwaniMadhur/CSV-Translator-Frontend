@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{% load static %}{% load static %}
+<link rel="stylesheet" type="text/css" href='../../static/main.css'>
+  <form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Download</button>
+  </form>
+
+
+  <p><a href="{% url 'home' %}">Return to home</a></p>
+{% endblock %}

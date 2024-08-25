@@ -1,0 +1,8 @@
+@font-face {
+  font-family: 'SFMono';
+  font-style: bold;
+  font-weight: normal;
+  font-size: xx-large;
+  src: local('SFMono'),url('./sf-pro-text-regular.ttf') format("opentype");
+}
+
