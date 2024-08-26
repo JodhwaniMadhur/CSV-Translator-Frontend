@@ -25,6 +25,8 @@ SECRET_KEY = 'e#-^aknk(5k)ej6rh#h$i(%h(m9)-j*lwrc_1dxnk=a@-mixlt'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+DEFAULT_AUTO_FIELD='django.db.models.AutoField'
+
 ALLOWED_HOSTS = [
                     os.environ['EC2_URL']
                 ]
